@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input name="first_name" type="text" placeholder="Имя" required>
+        <input type="date" name="date" required>
+        <input type="range" name="range">
+        <button type="submit">Отправить на сервер</button>
+    </form>
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        <input name="product" type="text" placeholder="Продукт" required>
+        <button type="submit">Добавить в корзину</button>
+    </form>
+</body>
+</html>

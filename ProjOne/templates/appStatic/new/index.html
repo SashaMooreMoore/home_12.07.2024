@@ -1,0 +1,13 @@
+{% extends 'appStatic/base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+    {% if info %}
+        {% for i in info %}
+            {{i.content|safe}}
+        {% endfor %}
+    {% else %}
+        <h1>Не удалось найти новость</h1>
+    {% endif %}
+{% endblock %}

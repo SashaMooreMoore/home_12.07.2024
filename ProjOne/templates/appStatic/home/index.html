@@ -1,0 +1,16 @@
+{% extends 'appStatic/base.html' %}
+
+{% block title %}Домашняя страница{% endblock %}
+
+
+{% block content %}
+    <h1 style="text-align: center;">Домашняя страница</h1>
+    {% for new in news %}
+        <!-- <a href="{% url 'urlPageNew' id=new.id %}" class="card">{{new.title}}</a> -->
+         <div class="carts_for_home_page">
+            {{new.title}} {{new.content|safe}}
+         </div>
+
+    {% endfor %}
+{% endblock %}
+

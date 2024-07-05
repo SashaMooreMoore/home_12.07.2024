@@ -1,0 +1,15 @@
+{% extends 'appStatic/base.html' %}
+
+{% block title %}Помощь{% endblock %}
+
+
+{% block content %}
+<h1>Страница помощи</h1>
+<form method="post" class="form__help">
+    {% csrf_token %}
+    <input name="first_name" type="text" placeholder="Имя" required>
+    <input name="email" type="email" placeholder="email" required>
+    <textarea name="text" placeholder="Что случилось?" required></textarea>
+    <button type="submit">Отправить</button>
+</form>
+{% endblock %}
